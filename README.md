@@ -1,15 +1,6 @@
-Course repo: https://github.com/aneagoie/ztm-master-the-coding-interview-ds-algo
+What is good code3 pillars of code? Readable, Scalable(Speed) and Memory(Space)
 
-Big O cheatsheet: https://zerotomastery.io/cheatsheets/big-o-cheat-sheet/?utm_source=udemy&utm_medium=coursecontent, https://www.bigocheatsheet.com/
-Big O mathematical formula: https://www.quora.com/What-is-the-difference-between-big-oh-big-omega-and-big-theta-notations // NOT IMPORTANT
-
-Resume checklist: https://github.com/aneagoie/resume-checklist
-
-Data Structures and Algorithams cheetsheet: https://zerotomastery.io/cheatsheets/data-structures-and-algorithms-cheat-sheet/
-
-What is good code? Readable, Scalable(Speed) and Memory(Space)
-
-Rules:
+Big O Rules:
 Rule 1: Worst case
 Rule 2: Remove constants
 Rule 3: Different term for inputs(or parameter) //O(a+b) - one after other steps addition or O(a*b) nested multiplication
@@ -21,8 +12,6 @@ O(n^2) - Quadratic - 2 nested loop of the input. if 3 nested loops then O(n^3) a
 O(n!) - Oh no - Loop for every element in the input
 
 Most solution have tradeoff between Speed and Memory. For speed we would need to sacrifice memory and viceversa.
-
-3 pillars of code: Readable, Speed(time) and Memory(space)
 
 2 ways to remember things when a program executes Heap and Stack.
 Heap is usually where we store variables.
@@ -70,6 +59,7 @@ Good code checklist:
 - [✅]If the interviewer is giving you advice/tips/hints. Follow them
 - [✅]Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you can get a time optimization to the process. In programming, you often times can use up a little bit more space to get faster time And always remember: Communicate your thought process as much as possible. Don’t worry about finishing it fast. Every part of the interview matters
 
+Arrays: are considered objects.
+ - It can be fixed(fixed size when init) 
+ - dynamic(automatically grow when reaches a threshold, ArrayList)
 
-Arrays:
-are considered objects. It can be fixed(fixed size when init) or dynamic(automatically grow when reaches a threshold, ArrayList)
