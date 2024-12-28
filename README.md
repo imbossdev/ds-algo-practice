@@ -60,6 +60,24 @@ Good code checklist:
 - [✅]Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you can get a time optimization to the process. In programming, you often times can use up a little bit more space to get faster time And always remember: Communicate your thought process as much as possible. Don’t worry about finishing it fast. Every part of the interview matters
 
 Arrays: are considered objects.
- - It can be fixed(fixed size when init) 
+ - It can be fixed(fixed size when init)
+ - Arrays are ordered
  - dynamic(automatically grow when reaches a threshold, ArrayList)
+ - Array's are index based, associate each item with an index sequancially.
+ - only requires O(1) for push (could require O(n) in case of dynamic array as it might increase the array size on push/append operation) and pop operations.
+ - Also requires O(1) for get as it is index based. But requires O(n) if you are searching
+ - Slow O(n) in case of insert and delete
+
+HashTables:
+- It stores the data in key value pairs
+- most of the language has this DataStructure, in JS it is called Object({age:10}), in Java it is Map(which internally uses hashtables), in Python it is Dictonary
+- it generates a hash for the key which points to a memory location(or sequence of memory locations also called bucket) and stores both key value pair at that location.
+- Hash value is some sort of gibberish alphanumerical value generated using some logic. There are multiple algorithams to generate hash like MD5, SHA-1, SHA-256 etc.
+- When accessing the data, we pass key.The key is again converted into hash to find the memory location and get the data.
+- Two keys can have same hash value which is called Collision, in which case it stores all key value pairs in same memory location.
+- On collision, it uses some sort of DataStructure(like LinkedList) to store multiple pairs.
+- Ideally it only requires O(1) for insert, delete, lookup and search except in case of collision in which case lookup could be O(n)
+- Key and Value can be any type of data structure.
+- In JS when using Object key can be only string(or internally it converts to string). Map can be used to store any type of DataStructure as key.
+- Hash Tables are generally unordered.
 
