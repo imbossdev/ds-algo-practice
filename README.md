@@ -79,5 +79,26 @@ HashTables:
 - Ideally it only requires O(1) for insert, delete, lookup and search except in case of collision in which case lookup could be O(n)
 - Key and Value can be any type of data structure.
 - In JS when using Object key can be only string(or internally it converts to string). Map can be used to store any type of DataStructure as key.
-- Hash Tables are generally unordered.
+- Hash Tables are Unordered.
+- Slow key iteration(getting all keys).
+- Using hashtables we optimize algorithams by avoiding nested loops. from O(n^2) to O(n). Hashmap tradeoff is fast access but more memory.
+
+LiskedLists:
+- Linked List is collection of items(nodes). Each item has 2 parts, first data itself and second a pointer/reference to next item.
+- There are 2 type of Linked List i.e., LinkedList(Singly Linked List) and DoublyLinkedList. 
+- In DoublyLinkedList each node has pointer to previous node, data and pointer to next node
+- LinkedList
+    - Is a simple implementation
+    - It requires less memory
+    - It cannot traverse backwards as DoublyLinkedList
+    - It should be used
+        - when memory is a contraint
+        - for faster insertion and deletion
+- DoublyLinkedList
+    - It can be traversed from both front and back
+    - Requires more memory
+    - It should be used
+        - when memory is not a contraint
+        - when searching for an element like searching backwards
+- Please refer to ArrayList reverse approach. It is bit complex and time taking to understand
 

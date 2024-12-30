@@ -85,21 +85,30 @@ class DoubleLinkedList{
     }
 }
 
-const a = new DoubleLinkedList(10);
-a.append(22);
-a.prepend(5);
-a.insert(5, 34);
-a.insert(2, 66);
-a.prepend(1);
-a.append(65);
-
+const a = new DoubleLinkedList(10); //10
+a.append(22); // 10, 22
 a.printLog();
 
-a.remove(2);
-
+a.prepend(5); // 5, 10, 22
 a.printLog();
 
-a.remove(8);
-a.remove(4);
+a.insert(5, 34); // 5, 10, 22, 34
+a.printLog();
 
+a.insert(2, 66); // 5, 10, 66, 22, 34
+a.printLog();
+
+a.prepend(1); // 1, 5, 10, 66, 22, 34
+a.printLog();
+
+a.append(65); // 1, 5, 10, 66, 22, 34, 65
+a.printLog();
+
+a.remove(2); // 1, 5, 66, 22, 34, 65
+a.printLog();
+
+a.remove(8); // 1, 5, 66, 22, 34, 65
+a.printLog();
+
+a.remove(4); // 1, 5, 66, 22, 65
 a.printLog();
