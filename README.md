@@ -132,5 +132,5 @@ Queues:
 - Any waitlist app or uber app for ride or a printer are good examples of queue. First user in the queue is served first.
 - Queue has operations like enqueue(push an element into the queue), dequeue(pop element from the queue), peek(same as seek but looks for first element in queue unlike last element in stack) which take O(1) time.
 - Queue also has lookup operation and would take O(n) time. This is rarely used.
-- Go through [Link to file](Queue/QueueUsingTwoStacks.java) which is improtant interview question.
+- Go through [QueueUsingTwoStacks](Queue/QueueUsingTwoStacks.java) which is improtant interview question.
 
