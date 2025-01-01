@@ -67,6 +67,8 @@ Arrays: are considered objects.
  - only requires O(1) for push (could require O(n) in case of dynamic array as it might increase the array size on push/append operation) and pop operations.
  - Also requires O(1) for get as it is index based. But requires O(n) if you are searching
  - Slow O(n) in case of insert and delete
+ - Arrays are generally placed next to each other.
+ - push and pop operations inserts and deletes last element in the array.
 
 HashTables:
 - It stores the data in key value pairs
@@ -100,5 +102,35 @@ LiskedLists:
     - It should be used
         - when memory is not a contraint
         - when searching for an element like searching backwards
+- LinkedList are ordered.
+- LinkedList can be used for Fast insertion and deletion.
+- LinkedList is also flexible in terms of size. No need to define a size.
+- In LinkedList cannot do random lookups like Arrays or other DataStructures. We need to traverse all the elements until we find the desired item.
+- LinkedList also requires more memory when compared to other DataStructures.
 - Please refer to ArrayList reverse approach. It is bit complex and time taking to understand
+
+Stacks & Queues:
+- They are linear data structures i.e., it allows traversal sequentially.
+- There is no random access to the elements.
+- Stacks can be implemented using Array/LinkedList, it depends what one wants
+    - Since only last element is added or removed both are good
+    - In Arrays elements are stored next to eachother where as in LinkedList elements are scattered
+    - LinkedList consumes more memory as it has to hold reference to next element
+    - Arrays size are either fixed or have to increase size and move all the elements to the new one where as in LinkedList size is flexible.
+- Queues should be implemented using LinkedList
+    - Removing first element in an array requires all the other elements index to be shifted. Would be O(n)
+    - Linked would consume only O(1)
+Stacks:
+- Elements stacked on top of each other.
+- Stacks are LIFO(Last In First Out). When plates are stacked on top of eachother, only first plate can be removed first.
+- It is manily used internally bu most of the programming languages, like stacking funcation calls, last function is called first or browser history or undo/redo operations.
+- Stack have operations like push(insert to the top), pop(remove top element) and peek(see the top element). All this operations take O(1) time.
+- Stack also has lookup operation and would take O(n) time. This is rarely used.
+Queues:
+- Queues are like any queue outside any restuarant or office. First person in the queue is served first.
+- Queues are FIFO(First In First Out). First element into the queue is the first element out of the queue.
+- Any waitlist app or uber app for ride or a printer are good examples of queue. First user in the queue is served first.
+- Queue has operations like enqueue(push an element into the queue), dequeue(pop element from the queue), peek(same as seek but looks for first element in queue unlike last element in stack) which take O(1) time.
+- Queue also has lookup operation and would take O(n) time. This is rarely used.
+- Go through [Link to file](Queue/QueueUsingTwoStacks.java) which is improtant interview question.
 
