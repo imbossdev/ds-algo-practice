@@ -1,4 +1,5 @@
-package com.imboss.dev;
+package Array;
+
 import java.util.HashSet;
 import java.util.Set;
 
