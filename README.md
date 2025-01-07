@@ -10,6 +10,7 @@ O(n) - Linear - 1 or many loop(s) of the input, but not nested
 O(1) - Constant - Single operation, no loops
 O(n^2) - Quadratic - 2 nested loop of the input. if 3 nested loops then O(n^3) and so on
 O(n!) - Oh no - Loop for every element in the input
+O(logn) - Simple means least number of steps needed to traverse a tree to get the result. Mostly used in tree data structures.
 
 Most solution have tradeoff between Speed and Memory. For speed we would need to sacrifice memory and viceversa.
 
@@ -58,6 +59,8 @@ Good code checklist:
 - [✅]Look at the Time vs Space tradeoff. Sometimes storing extra state in memory can help the time. (Runtime)
 - [✅]If the interviewer is giving you advice/tips/hints. Follow them
 - [✅]Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you can get a time optimization to the process. In programming, you often times can use up a little bit more space to get faster time And always remember: Communicate your thought process as much as possible. Don’t worry about finishing it fast. Every part of the interview matters
+
+https://visualgo.net/en is a good place for seeing the datastructures workings visually. 
 
 Arrays: are considered objects.
  - It can be fixed(fixed size when init)
@@ -134,3 +137,67 @@ Queues:
 - Queue also has lookup operation and would take O(n) time. This is rarely used.
 - Go through [QueueUsingTwoStacks](Queue/QueueUsingTwoStacks.java) which is improtant interview question.
 
+Trees:
+- Trees are another type of data structure which we use extensively.
+- Each tree starts with a root node and all other elements decends from root node.
+- Each child node decends from parent node.
+- Tree can have sub-trees as well.
+- Best examples of trees are dom structure like how html contains a head and body. And each of them have their children.
+- Real world examples can be family tree.
+- In software world example can be Abstract Syntax Tree or chess game or comments in any website.
+- LinkedList is technically a type of tree, but it is linear and in trees a node can only to a child.
+- In trees there is always only 1 entry point which is the root.
+- In trees nodes dont have to reference to its parent
+- Like in real life there are many kinds of trees only with minor differences.
+
+         O (Root Node, ParentNode, Level 0)
+       /   \
+      O     O (ParentNodes, Level 1)
+     / \   / \
+    O   O O   O (LeafNodes, Level 2)
+
+BinaryTree:
+- Each node can only have 0, 1 or 2 nodes and each child can only have 1 parent.
+- Each node represents a certain state.
+- A PerfectBinaryTree has everything filled in i.e, all the nodes has 2 children until it reaches leaf nodes.
+- A PerfectBinaryTree is really efficient because in each level the  number of nodes double
+- In PerfectBinaryTree (sum of all the leaf nodes) = (all the nodes in above levels + 1) i.e., half of nodes is in  bottom level.
+- Because of this type of structure its complexity is O(log N).
+- A FullBinaryTree has all of the nodes with either 0 or 2 childres but not necessarily every node has child like PerfectBinaryTree
+- Number of nodes in each level can be calculated using 2^n where n is the level. For example at level 2 we have 2^2 = 4 nodes
+- Number of nodes in a tree can be calculated as (2^h - 1) where h is the height(total levels) of the tree. Example: 2^3-1 = 7 when tree has 3 levels.
+
+Perfect Binary Tree (Full and all leaves at same depth)
+         O
+       /   \
+      O     O
+     / \   / \
+    O   O O   O
+
+BinarySearchTree:
+- BinarySearchTree is really good at searching.
+- It are great for comparing. It preserves relationship. 
+- Like folders in a computer should have relationships like parent folder has sub-folder which has child folder.
+- It has some rules:
+    - All child nodes in the tree to the right of root node must be greater than the root node, i.e., left nodes always decreases
+    - A node can only have upto 2 children
+- All of its operations insert, delete and lookup are generally O(log N). No O(1) operations.
+- BinarySearchTree can quickly become unbalanced when we keep adding elements to onside of the tree. 
+- For example in BinarySearchTree since right node is greater than left node, if we keep on adding greater values, it keeps on adding to right node. This would become unbalanced tree and seem more lika a LinkedList rather than a BinarySearchTree. It also decreases the performance of BinarySearchTree O(n)
+- BinarySearchTree is ordered. Also its size is flexible unlike arrays where we need to define the size.
+- When compared to Array, lookup, inserts and deletes will be faster.
+- When compared to hashtables, hashtables are not ordered. We also dont get tree structure(parent-child relationship) in hashtable.
+- AVL Tree and RedBlack Tree are 2 binary search trees which balances itself
+
+Unbalanced BinarySearchTree
+       8
+     /   \
+    3     11
+   / \   / \
+  1   6 10  12
+             \
+              13
+               \
+                14
+                 \
+                  15
